@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+.env.*
+data/*.db
+.DS_Store
+# never commit live Qloo responses (hackathon data-use rule)
+qloo_cache/
+# local-only planning docs
+SUBMISSION_DRAFT.md
+VON_STEPS.md

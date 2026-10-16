@@ -1,0 +1,416 @@
+{
+  "success": true,
+  "results": {
+    "entities": [
+      {
+        "name": "Colibri Morning Kitchen",
+        "entity_id": "AE2F7688-ABCE-55FF-8502-479B0A790873",
+        "type": "urn:entity",
+        "subtype": "urn:entity:place",
+        "properties": {
+          "description": "Fictional place for Till's mock mode. Not Qloo data.",
+          "address": "Highland Park, Los Angeles, CA (fictional)",
+          "price_level": 2,
+          "business_rating": 4.7
+        },
+        "popularity": 0.91,
+        "tags": [
+          {
+            "id": "urn:tag:dining_options:place:brunch",
+            "name": "Brunch",
+            "type": "urn:tag:dining_options:place"
+          },
+          {
+            "id": "urn:tag:genre:place:restaurant:mexican",
+            "name": "Mexican",
+            "type": "urn:tag:genre:place"
+          },
+          {
+            "id": "urn:tag:category:place:coffee_shop",
+            "name": "Coffee Shop",
+            "type": "urn:tag:category:place"
+          },
+          {
+            "id": "urn:tag:amenity:place:outdoor_seating",
+            "name": "Outdoor Seating",
+            "type": "urn:tag:amenity:place"
+          }
+        ],
+        "query": {
+          "affinity": 0.97
+        },
+        "disambiguation": "Highland Park, Los Angeles (mock)"
+      },
+      {
+        "name": "Cafe Arroyo Seco",
+        "entity_id": "A2C81130-4C19-5F98-876E-C3011CC943DB",
+        "type": "urn:entity",
+        "subtype": "urn:entity:place",
+        "properties": {
+          "description": "Fictional place for Till's mock mode. Not Qloo data.",
+          "address": "Highland Park, Los Angeles, CA (fictional)",
+          "price_level": 2,
+          "business_rating": 4.6
+        },
+        "popularity": 0.88,
+        "tags": [
+          {
+            "id": "urn:tag:category:place:coffee_shop",
+            "name": "Coffee Shop",
+            "type": "urn:tag:category:place"
+          },
+          {
+            "id": "urn:tag:category:place:bakery",
+            "name": "Bakery",
+            "type": "urn:tag:category:place"
+          },
+          {
+            "id": "urn:tag:dining_options:place:brunch",
+            "name": "Brunch",
+            "type": "urn:tag:dining_options:place"
+          },
+          {
+            "id": "urn:tag:offerings:place:vegan_options",
+            "name": "Vegan Options",
+            "type": "urn:tag:offerings:place"
+          }
+        ],
+        "query": {
+          "affinity": 0.95
+        },
+        "disambiguation": "Highland Park, Los Angeles (mock)"
+      },
+      {
+        "name": "La Mesa de Domingo",
+        "entity_id": "BA45F573-126E-5A2C-953A-F9601CB56150",
+        "type": "urn:entity",
+        "subtype": "urn:entity:place",
+        "properties": {
+          "description": "Fictional place for Till's mock mode. Not Qloo data.",
+          "address": "Highland Park, Los Angeles, CA (fictional)",
+          "price_level": 2,
+          "business_rating": 4.5
+        },
+        "popularity": 0.86,
+        "tags": [
+          {
+            "id": "urn:tag:dining_options:place:brunch",
+            "name": "Brunch",
+            "type": "urn:tag:dining_options:place"
+          },
+          {
+            "id": "urn:tag:genre:place:restaurant:mexican",
+            "name": "Mexican",
+            "type": "urn:tag:genre:place"
+          },
+          {
+            "id": "urn:tag:genre:place:restaurant:latin_american",
+            "name": "Latin American",
+            "type": "urn:tag:genre:place"
+          },
+          {
+            "id": "urn:tag:children:place:good_for_kids",
+            "name": "Good For Kids",
+            "type": "urn:tag:children:place"
+          }
+        ],
+        "query": {
+          "affinity": 0.93
+        },
+        "disambiguation": "Highland Park, Los Angeles (mock)"
+      },
+      {
+        "name": "Fig and Ember",
+        "entity_id": "BD7D6454-C917-5861-9960-523657A7CCF1",
+        "type": "urn:entity",
+        "subtype": "urn:entity:place",
+        "properties": {
+          "description": "Fictional place for Till's mock mode. Not Qloo data.",
+          "address": "Highland Park, Los Angeles, CA (fictional)",
+          "price_level": 3,
+          "business_rating": 4.6
+        },
+        "popularity": 0.84,
+        "tags": [
+          {
+            "id": "urn:tag:dining_options:place:brunch",
+            "name": "Brunch",
+            "type": "urn:tag:dining_options:place"
+          },
+          {
+            "id": "urn:tag:category:place:wine_bar",
+            "name": "Wine Bar",
+            "type": "urn:tag:category:place"
+          },
+          {
+            "id": "urn:tag:amenity:place:outdoor_seating",
+            "name": "Outdoor Seating",
+            "type": "urn:tag:amenity:place"
+          }
+        ],
+        "query": {
+          "affinity": 0.91
+        },
+        "disambiguation": "Highland Park, Los Angeles (mock)"
+      },
+      {
+        "name": "Pan Dulce Collective",
+        "entity_id": "D12383BC-A843-561B-8C7D-CA27C08841D6",
+        "type": "urn:entity",
+        "subtype": "urn:entity:place",
+        "properties": {
+          "description": "Fictional place for Till's mock mode. Not Qloo data.",
+          "address": "Highland Park, Los Angeles, CA (fictional)",
+          "price_level": 1,
+          "business_rating": 4.8
+        },
+        "popularity": 0.8,
+        "tags": [
+          {
+            "id": "urn:tag:category:place:bakery",
+            "name": "Bakery",
+            "type": "urn:tag:category:place"
+          },
+          {
+            "id": "urn:tag:genre:place:restaurant:mexican",
+            "name": "Mexican",
+            "type": "urn:tag:genre:place"
+          },
+          {
+            "id": "urn:tag:genre:place:restaurant:dessert",
+            "name": "Dessert",
+            "type": "urn:tag:genre:place"
+          },
+          {
+            "id": "urn:tag:children:place:good_for_kids",
+            "name": "Good For Kids",
+            "type": "urn:tag:children:place"
+          }
+        ],
+        "query": {
+          "affinity": 0.9
+        },
+        "disambiguation": "Highland Park, Los Angeles (mock)"
+      },
+      {
+        "name": "Green Verbena",
+        "entity_id": "74F67AF5-7E7C-5FC5-A3AD-82E1FB36B1BF",
+        "type": "urn:entity",
+        "subtype": "urn:entity:place",
+        "properties": {
+          "description": "Fictional place for Till's mock mode. Not Qloo data.",
+          "address": "Highland Park, Los Angeles, CA (fictional)",
+          "price_level": 2,
+          "business_rating": 4.4
+        },
+        "popularity": 0.79,
+        "tags": [
+          {
+            "id": "urn:tag:offerings:place:vegan_options",
+            "name": "Vegan Options",
+            "type": "urn:tag:offerings:place"
+          },
+          {
+            "id": "urn:tag:dining_options:place:brunch",
+            "name": "Brunch",
+            "type": "urn:tag:dining_options:place"
+          },
+          {
+            "id": "urn:tag:category:place:coffee_shop",
+            "name": "Coffee Shop",
+            "type": "urn:tag:category:place"
+          }
+        ],
+        "query": {
+          "affinity": 0.88
+        },
+        "disambiguation": "Highland Park, Los Angeles (mock)"
+      },
+      {
+        "name": "York Blvd Roasters",
+        "entity_id": "12C78469-1400-50C8-A11C-E2D0C287B69A",
+        "type": "urn:entity",
+        "subtype": "urn:entity:place",
+        "properties": {
+          "description": "Fictional place for Till's mock mode. Not Qloo data.",
+          "address": "Highland Park, Los Angeles, CA (fictional)",
+          "price_level": 1,
+          "business_rating": 4.5
+        },
+        "popularity": 0.83,
+        "tags": [
+          {
+            "id": "urn:tag:category:place:coffee_shop",
+            "name": "Coffee Shop",
+            "type": "urn:tag:category:place"
+          },
+          {
+            "id": "urn:tag:amenity:place:outdoor_seating",
+            "name": "Outdoor Seating",
+            "type": "urn:tag:amenity:place"
+          }
+        ],
+        "query": {
+          "affinity": 0.87
+        },
+        "disambiguation": "Highland Park, Los Angeles (mock)"
+      },
+      {
+        "name": "Taqueria Luz",
+        "entity_id": "13CE9057-32E9-5B58-8CAF-3DFA7B8B158D",
+        "type": "urn:entity",
+        "subtype": "urn:entity:place",
+        "properties": {
+          "description": "Fictional place for Till's mock mode. Not Qloo data.",
+          "address": "Highland Park, Los Angeles, CA (fictional)",
+          "price_level": 1,
+          "business_rating": 4.6
+        },
+        "popularity": 0.9,
+        "tags": [
+          {
+            "id": "urn:tag:genre:place:restaurant:mexican",
+            "name": "Mexican",
+            "type": "urn:tag:genre:place"
+          },
+          {
+            "id": "urn:tag:genre:place:restaurant:latin_american",
+            "name": "Latin American",
+            "type": "urn:tag:genre:place"
+          },
+          {
+            "id": "urn:tag:children:place:good_for_kids",
+            "name": "Good For Kids",
+            "type": "urn:tag:children:place"
+          }
+        ],
+        "query": {
+          "affinity": 0.85
+        },
+        "disambiguation": "Highland Park, Los Angeles (mock)"
+      },
+      {
+        "name": "Ondas Natural Wine",
+        "entity_id": "7D9218E4-7877-595C-BF29-D615578941BA",
+        "type": "urn:entity",
+        "subtype": "urn:entity:place",
+        "properties": {
+          "description": "Fictional place for Till's mock mode. Not Qloo data.",
+          "address": "Highland Park, Los Angeles, CA (fictional)",
+          "price_level": 3,
+          "business_rating": 4.3
+        },
+        "popularity": 0.72,
+        "tags": [
+          {
+            "id": "urn:tag:category:place:wine_bar",
+            "name": "Wine Bar",
+            "type": "urn:tag:category:place"
+          },
+          {
+            "id": "urn:tag:amenity:place:outdoor_seating",
+            "name": "Outdoor Seating",
+            "type": "urn:tag:amenity:place"
+          }
+        ],
+        "query": {
+          "affinity": 0.82
+        },
+        "disambiguation": "Highland Park, Los Angeles (mock)"
+      },
+      {
+        "name": "Sugarbird Creamery",
+        "entity_id": "29444166-86D5-53DC-AB80-EA15926DFAB7",
+        "type": "urn:entity",
+        "subtype": "urn:entity:place",
+        "properties": {
+          "description": "Fictional place for Till's mock mode. Not Qloo data.",
+          "address": "Highland Park, Los Angeles, CA (fictional)",
+          "price_level": 1,
+          "business_rating": 4.7
+        },
+        "popularity": 0.77,
+        "tags": [
+          {
+            "id": "urn:tag:genre:place:restaurant:dessert",
+            "name": "Dessert",
+            "type": "urn:tag:genre:place"
+          },
+          {
+            "id": "urn:tag:children:place:good_for_kids",
+            "name": "Good For Kids",
+            "type": "urn:tag:children:place"
+          }
+        ],
+        "query": {
+          "affinity": 0.8
+        },
+        "disambiguation": "Highland Park, Los Angeles (mock)"
+      },
+      {
+        "name": "Garvanza Garden Cafe",
+        "entity_id": "B6CC2DF9-D88C-55E4-84B5-6E5391A4EA72",
+        "type": "urn:entity",
+        "subtype": "urn:entity:place",
+        "properties": {
+          "description": "Fictional place for Till's mock mode. Not Qloo data.",
+          "address": "Highland Park, Los Angeles, CA (fictional)",
+          "price_level": 2,
+          "business_rating": 4.2
+        },
+        "popularity": 0.7,
+        "tags": [
+          {
+            "id": "urn:tag:dining_options:place:brunch",
+            "name": "Brunch",
+            "type": "urn:tag:dining_options:place"
+          },
+          {
+            "id": "urn:tag:offerings:place:vegan_options",
+            "name": "Vegan Options",
+            "type": "urn:tag:offerings:place"
+          },
+          {
+            "id": "urn:tag:amenity:place:outdoor_seating",
+            "name": "Outdoor Seating",
+            "type": "urn:tag:amenity:place"
+          }
+        ],
+        "query": {
+          "affinity": 0.78
+        },
+        "disambiguation": "Highland Park, Los Angeles (mock)"
+      },
+      {
+        "name": "Monte Verde Tamales",
+        "entity_id": "5E6F1D9B-844A-5B87-9C1E-7F87ED502BEA",
+        "type": "urn:entity",
+        "subtype": "urn:entity:place",
+        "properties": {
+          "description": "Fictional place for Till's mock mode. Not Qloo data.",
+          "address": "Highland Park, Los Angeles, CA (fictional)",
+          "price_level": 1,
+          "business_rating": 4.6
+        },
+        "popularity": 0.74,
+        "tags": [
+          {
+            "id": "urn:tag:genre:place:restaurant:mexican",
+            "name": "Mexican",
+            "type": "urn:tag:genre:place"
+          },
+          {
+            "id": "urn:tag:genre:place:restaurant:latin_american",
+            "name": "Latin American",
+            "type": "urn:tag:genre:place"
+          }
+        ],
+        "query": {
+          "affinity": 0.76
+        },
+        "disambiguation": "Highland Park, Los Angeles (mock)"
+      }
+    ]
+  },
+  "duration": 42
+}
