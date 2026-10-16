@@ -63,6 +63,15 @@ claude mcp add --transport http till http://127.0.0.1:8765/mcp
 
 Container: `docker build -t till-qloo . && docker run -p 8080:8080 -e QLOO_API_KEY=... till-qloo`.
 
+### Deploy and live check
+
+- `railway.json` (primary host, Dockerfile build, health check `/agent/status`) and `render.yaml` (fallback, Render
+  free web service). `scripts/deploy_railway.sh` prints its plan; `--run` deploys.
+- `.github/workflows/keepwarm.yml` pings the demo every 10 minutes once the repo variable `DEMO_URL` is set, so a
+  free host that sleeps never shows a judge a cold start.
+- `scripts/live_check.py` makes five real Qloo requests (taste, ideas, a location-filter control, comparable-place
+  pricing, tag lookup) and flags any difference from the mock fixture. It prints only; nothing is saved.
+
 ### Tests
 
 ```bash

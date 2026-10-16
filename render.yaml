@@ -1,0 +1,17 @@
+# Fallback host: Render free web service (Blueprint). No card needed for the free tier, but it spins down after
+# 15 minutes idle and takes about a minute to wake, so .github/workflows/keepwarm.yml pings it every 10 minutes
+# (one service always on is about 744 of the 750 free instance hours a month).
+# Secrets are never in this file: QLOO_API_KEY is sync:false, so Render asks for it in the dashboard.
+services:
+  - type: web
+    name: till-qloo
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /agent/status
+    autoDeploy: true
+    envVars:
+      - key: QLOO_API_KEY
+        sync: false
+      - key: QLOO_BASE_URL
+        value: https://hackathon.api.qloo.com
