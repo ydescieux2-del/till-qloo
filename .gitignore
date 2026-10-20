@@ -10,3 +10,5 @@ qloo_cache/
 # local-only planning docs
 SUBMISSION_DRAFT.md
 VON_STEPS.md
+tools/.tts_cache/
+video/
