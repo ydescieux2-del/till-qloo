@@ -318,7 +318,7 @@ def launch_ideas(neighborhood: str = DEFAULT_NEIGHBORHOOD, age: str = "", busine
         speech = (f"Without a taste signal for {neighborhood} I can't rank ideas; any pick would be a guess.")
     else:
         speech = (f"Best fit for {neighborhood}: {best['title']}, with a local fit of {best['fit']} out of 100"
-                  f" (it matches {', '.join(best['matched'])}). Next is {ranked[1]['title'].lower()} at {ranked[1]['fit']}."
+                  f" (it matches {', '.join(best['matched'])}). Next is {ranked[1]['title']} at {ranked[1]['fit']}."
                   " Want me to price the top one?")
     if not src["live"]:
         speech += " Demo data until the Qloo key is set."
