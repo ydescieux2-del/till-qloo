@@ -41,23 +41,37 @@ def _affinity(e: dict) -> float:
     return max(0.0, float(a))
 
 
+# Tag families that describe logistics, not taste. Live Qloo tags nearly every place with these
+# (wheelchair entrance, credit cards, street parking), so they would crowd out what people actually like.
+NOT_TASTE = {"accessibility", "payments", "credit_card", "amenities", "parking", "service_type", "service_options",
+             "planning", "age_range", "genre", "activity_type", "customer_identity", "gender", "audience"}
+
+
+def _is_taste(tag: dict) -> bool:
+    parts = str(tag.get("type") or tag.get("id", "")).split(":")
+    return not (len(parts) > 2 and parts[2] in NOT_TASTE)
+
+
 def profile(entities: list[dict], top: int = 8) -> list[dict]:
     """Tags weighted by the Qloo affinity of the places that carry them, as a share of total affinity
-    (0 to 1). A tag on every high-affinity place scores near 1."""
+    (0 to 1). A tag on every high-affinity place scores near 1. Logistics tags (NOT_TASTE) are left out."""
     total = sum(_affinity(e) for e in entities)
     if not total:
         return []
     acc: dict[str, dict] = {}
     for e in entities:
         a = _affinity(e)
-        for t in e.get("tags") or []:
+        for t in filter(_is_taste, e.get("tags") or []):
             row = acc.setdefault(t["id"], {"id": t["id"], "name": t.get("name", t["id"]), "type": t.get("type", ""),
                                            "weight": 0.0, "places": 0})
             row["weight"] += a
             row["places"] += 1
-    rows = sorted(acc.values(), key=lambda r: (-r["weight"], r["name"]))
-    for r in rows:
-        r["weight"] = round(r["weight"] / total, 3)
+    rows, seen = [], set()
+    for r in sorted(acc.values(), key=lambda r: (-r["weight"], r["name"])):
+        if r["name"].lower() in seen:   # "Casual" ambience and "Casual" decor read as one trait out loud
+            continue
+        seen.add(r["name"].lower())
+        rows.append({**r, "weight": round(r["weight"] / total, 3)})
     return rows[:top]
 
 

@@ -132,6 +132,15 @@ def test_without_qloo_signal_nothing_is_recommended():
     assert taste.local_price_level([]) is None
 
 
+def test_profile_skips_logistics_tags():
+    # Live Qloo tags almost every place "Wheelchair accessible entrance"; that is not a taste.
+    tag = lambda kind, name: {"id": f"urn:tag:{kind}:qloo:{name.lower()}", "name": name, "type": f"urn:tag:{kind}:qloo"}
+    ents = [{"query": {"affinity": 0.8}, "tags": [tag("accessibility", "Wheelchair accessible entrance"),
+                                                  tag("ambience", "Casual"), tag("decor", "Casual"),
+                                                  tag("cuisine", "Mexican")]}]
+    assert [r["name"] for r in taste.profile(ents)] == ["Casual", "Mexican"]
+
+
 def test_price_the_idea_uses_engine_and_local_price():
     _fresh()
     out = server.price_the_idea("sunday_brunch", HP)
