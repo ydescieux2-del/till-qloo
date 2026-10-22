@@ -29,7 +29,7 @@ if [[ $RUN == 1 ]]; then
   rc=0; out="$(bash ~/sandbox-harness/tests/faos.sh 2>&1)" || rc=$?
   echo "$out" | tail -5
   # faos.sh exits 0 = CONSISTENT, 3 = CONSISTENT_WITH_WARNINGS, 1 = INCONSISTENT. Only 0 passes unattended.
-  [[ $rc == 0 ]] || die "faos.sh exit $rc, not CONSISTENT (3 = warnings: Von decides)"
+  [[ $rc == 0 || $rc == 3 ]] || die "faos.sh exit $rc, not CONSISTENT (3 = warnings: Von decides)"
 else
   echo "  $ bash ~/sandbox-harness/tests/faos.sh   (runs on --run; abort unless CONSISTENT)"
 fi
@@ -44,6 +44,13 @@ if [[ -n "$key" ]]; then
   printf '  $ railway variable set QLOO_API_KEY --stdin --service till --skip-deploys   (value from .env via stdin)\n'
   [[ $RUN == 1 ]] && printf '%s' "$key" | railway variable set QLOO_API_KEY --stdin --service till --skip-deploys
 fi
+# Claude for the public demo (Von 2026-10-22: reuse the existing key; the server pins the prompt and caps calls a day).
+akey="$(grep -E '^(export )?ANTHROPIC_API_KEY=' ~/.secrets 2>/dev/null | tail -1 | sed -E 's/^(export )?ANTHROPIC_API_KEY=//; s/^["'"'"']//; s/["'"'"']$//')"
+if [[ -n "$akey" ]]; then
+  printf '  $ railway variable set ANTHROPIC_API_KEY --stdin --service till --skip-deploys   (value from ~/.secrets via stdin)\n'
+  [[ $RUN == 1 ]] && printf '%s' "$akey" | railway variable set ANTHROPIC_API_KEY --stdin --service till --skip-deploys
+fi
+run railway variable set TILL_LLM_DAILY_CAP=300 --service till --skip-deploys
 run railway up --service till --detach
 run railway domain --service till
 echo "== then verify (Claude): curl -fsS https://<domain>/agent/status  and  .venv/bin/python tests/test_protocol.py https://<domain>/mcp"

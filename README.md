@@ -1,10 +1,17 @@
 # Till for Qloo: what fits your neighborhood, and can you afford it?
 
+**Live demo:** https://till-production-20b7.up.railway.app (Chrome for the microphone; live Qloo Insights data)
+
 > "Could my bakery run a Sunday brunch that fits this neighborhood, and can it afford it?"
 >
-> "It fits. The neighborhood leans brunch and Mexican, and Sunday brunch scores 84 out of 100 locally. Yes, but it
-> gets tight: it costs about 1.2 thousand dollars to start and 324 dollars a week; even if it earned nothing, your
-> lowest cash point goes from 11.2 thousand to 8 thousand dollars. At $22 a guest, about 22 guests a week pays for it."
+> "Sunday brunch fits Highland Park's taste for casual, walkable, afternoon spots, and it's affordable but tight: your
+> lowest cash point would drop from about 11.2 thousand to about 8 thousand dollars. It breaks even at roughly 34
+> guests a week at 14 dollars each."
+>
+> "What could my bakery launch?" ... "Can I afford the kids' cookie class?"
+>
+> "Yes, comfortably: the kids' cookie class costs about 350 dollars to start and 133 a week, and your lowest cash
+> point only drops from 11.2 thousand to 10.1 thousand dollars."
 
 Small business owners make two bets every time they try something new: **will my neighborhood want it**, and
 **will my cash survive it**. Till answers both in one conversation. **Qloo's taste graph** answers the first: which
