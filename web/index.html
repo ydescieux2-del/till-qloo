@@ -259,15 +259,16 @@ let lastCharges = [];
 async function offlineTurn(text) {
   const t = text.toLowerCase();
   const first = r => r.content[0].text;
-  if (/(brunch|launch|idea|fits?\b|neighbo|love|taste|menu|event)/.test(t)) {
+  const named = t.match(/brunch|pan dulce|preorder|vegan|pastry|cookie|kids|sourdough|wine/g) || [];   // words from the idea titles
+  if (named.length || /(launch|idea|fits?\b|neighbo|love|taste|menu|event|(top|best) one)/.test(t)) {
     if (/(afford|price|cost)/.test(t)) {
       const top = ((await callTool("neighborhood_taste", {})).structuredContent.taste || []).slice(0, 2)
                     .map(x => x.name.toLowerCase());
       const ideas = (await callTool("launch_ideas", {})).structuredContent.ideas || [];
-      const pick = ideas.find(i => t.includes("brunch") && i.id.includes("brunch")) || ideas[0];
+      const pick = ideas.find(i => named.some(w => i.title.toLowerCase().includes(w))) || ideas[0];
       if (!pick || !pick.fit) return "I don't have a taste signal to pick an idea yet.";
       const priced = await callTool("price_the_idea", { idea_id: pick.id });
-      return `It fits. The neighborhood leans ${top.join(" and ")}, and ${pick.title.split(":")[0].toLowerCase()} ` +
+      return `It fits. The neighborhood leans ${top.join(" and ")}, and ${pick.title.split(":")[0]} ` +
              `scores ${pick.fit} out of 100 locally. ` + first(priced);
     }
     if (/(launch|idea|could|should|menu|event)/.test(t)) return first(await callTool("launch_ideas", {}));
