@@ -15,3 +15,8 @@ services:
         sync: false
       - key: QLOO_BASE_URL
         value: https://hackathon.api.qloo.com
+      # Claude chains the tools in the public demo. Use a key from a workspace with a monthly spend limit.
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: TILL_LLM_DAILY_CAP   # Claude calls per day (about 3 per question); past it the page uses its keyword router
+        value: "300"
