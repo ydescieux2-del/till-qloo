@@ -31,14 +31,15 @@ NARRATOR, OWNER, TILL = "nPczCjzI2devNBz1zQrb", "iP95p4xoKVk53GoZ742B", "cjVigY5
 
 # (kind, text shown or spoken, spoken version for the owner when it differs)
 BEATS = [
-    ("say", "A bakery owner wants to try something new. What would this neighborhood actually love, "
-            "and can the bakery afford to launch it? Till answers out loud: a voice CFO built on Qloo."),
+    ("say", "A bakery owner has a hunch: Sunday brunch. But what would this neighborhood actually love, "
+            "and can the bakery afford it? Till answers out loud: a voice CFO built on Qloo."),
     ("ask", "Could my bakery run a Sunday brunch that fits this neighborhood, and can it afford it?", None),
-    ("say", "Qloo Insights ranked what Highland Park loves. Till's cash engine priced the idea against "
-            "the bakery's own books. Every number comes from the engine, never the model."),
+    ("say", "Brunch fits, but it's tight. So the owner asks Qloo's taste graph what Highland Park really goes for. "
+            "Every number comes from Till's cash engine, never the model."),
     ("ask", "What does Highland Park love?", None),
     ("ask", "What could my bakery launch?", None),
-    ("say", "Till for Qloo. Open source, and every tool is an MCP server any agent can use."),
+    ("ask", "Can I afford the kids' cookie class?", None),
+    ("say", "Qloo changed the plan. Till for Qloo: open source, and every tool is an MCP server any agent can use."),
 ]
 
 CACHE = ROOT / "tools" / ".tts_cache"
